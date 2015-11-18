@@ -1,6 +1,6 @@
-// TEAM JJ - Jennifer Yu, Jackson Deysine
+// TEAM Yu(r) W(r)ong - Jennifer Yu, Conan Wong
 // APCS1 pd9
-// HW32 -- Irrationality Stops Here
+// HW33 -- Do You Even Add, Bro?
 // 2015-11-17
 
 public class Rational {
