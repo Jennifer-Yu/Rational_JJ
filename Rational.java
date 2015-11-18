@@ -22,7 +22,6 @@ if an invalid denominator is attempted, should print a message and set the numbe
         if (q != 0) {
             num = p;
             den = q;
-            //return "Set as" + num + " / " + den ;
         }
         else {
             System.out.println("Invalid denominator! Setting number to 0/1...");
@@ -63,6 +62,35 @@ Works the same as multiply, except the operation is division
         den *= r.num;
 }//lml this is how i still do rational division, the flipping method.
 
+    public void add(Rational r){
+    	num *= r.den;
+    	r.num *= den;
+    	num += r.num;
+    	den *= r.den;
+    	r.den = den;
+}	
+
+    public void subtract(Rational r){
+    	num *= r.den;
+    	r.num *= den;
+    	num -= r.num;
+    	den *= r.den;
+}
+
+    public double gcd(double a, double b) { //while loop
+	double currentGCD = 1.0;
+	double remainder;
+	if (a % b == 0.0) { //base case
+		currentGCD = b;
+	}
+	while ((a % b) != 0.0) {
+		remainder = a % b; 
+		a = b; 
+		b = remainder; 
+		currentGCD = b;
+	}
+	return currentGCD;
+}
     public static void main(String[] args) {
         Rational a = new Rational();
         a.rational();
