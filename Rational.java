@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // TEAM JJ - Jennifer Yu, Jackson Deysine
 // APCS1 pd9
 // HW32 -- Irrationality Stops Here
@@ -44,20 +45,51 @@ floatValue - Returns a floating point value of the number, Uses the most precise
     
 /*
 multiply
+=======
+public class Rational {
+    
+
+//Instance variables for the numerator and denominator
+
+
+//Default constructor (no parameters)
+
+
+//Creates a new Rational with the value of 0/1
+
+/*Constructor takes 2 parameters, one for the numerator, one for the denominator
+if an invalid denominator is attempted, should print a message and set the number to 0/1 */
+
+//toString - returns a string representation of the rational number (formatting of your choice)
+    
+/*
+floatValue - Returns a floating point value of the number, Uses the most precise floating point primitive
+multiply
+*/
+
+    
+/*
+>>>>>>> d3448bd5e486921f48bf19bd500d8c470e7917a5
 Takes 1 Rational object as a parameter and multiplies it by this Rational object
 Does not return any value 
 Should modify this object and leave the parameter alone (see below for example)
 Need not reduce the fraction
 */
+<<<<<<< HEAD
     public void multiply(Rational r) {
         num *= r.num;
         den = den * r.den;
 }
 
+=======
+
+    
+>>>>>>> d3448bd5e486921f48bf19bd500d8c470e7917a5
 /*
 divide
 Works the same as multiply, except the operation is division
 */
+<<<<<<< HEAD
     public void divide(Rational r) {
         num = num * r.den;
         den = den * r.num;
@@ -81,6 +113,14 @@ Works the same as multiply, except the operation is division
 	    a.divide(b);
 	    System.out.println(a);
 	    //System.out.println("hi");	 
+=======
+     
+
+
+    
+    public static void main(String[] args) {
+	System.out.println ("hi");
+>>>>>>> d3448bd5e486921f48bf19bd500d8c470e7917a5
     }
 }
 
@@ -90,3 +130,7 @@ Works the same as multiply, except the operation is division
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d3448bd5e486921f48bf19bd500d8c470e7917a5
