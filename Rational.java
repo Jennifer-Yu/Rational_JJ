@@ -51,7 +51,7 @@ Need not reduce the fraction
 */
     public void multiply(Rational r) {
         num *= r.num;
-        den = den * r.den;
+        den *= r.den;
 }
 
 /*
@@ -59,8 +59,8 @@ divide
 Works the same as multiply, except the operation is division
 */
     public void divide(Rational r) {
-        num = num * r.den;
-        den = den * r.num;
+        num *= r.den;
+        den *= r.num;
 }//lml this is how i still do rational division, the flipping method.
 
     public static void main(String[] args) {
