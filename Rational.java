@@ -91,6 +91,15 @@ Works the same as multiply, except the operation is division
 	}
 	return currentGCD;
 }
+    public void reduce(){
+    	double divisor = gcd(num,den);
+    	while (divisor != 1.0){
+    		divisor = gcd(num,den);
+    		num = num / divisor;
+    		den = den / divisor;
+    	}
+}
+
     public static void main(String[] args) {
         Rational a = new Rational();
         a.rational();
