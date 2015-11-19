@@ -62,7 +62,7 @@ Works the same as multiply, except the operation is division
         den *= r.num;
 }//lml this is how i still do rational division, the flipping method.
 
-    public void add(Rational r){
+    public void add(Rational r){ //cross multiply, add, change denom, set denoms
     	num *= r.den;
     	r.num *= den;
     	num += r.num;
@@ -70,7 +70,7 @@ Works the same as multiply, except the operation is division
     	r.den = den;
 }	
 
-    public Rational subtract(Rational r){
+    public Rational subtract(Rational r){ //same as above but subtract
     	num *= r.den;
     	r.num *= den;
     	num -= r.num;
@@ -92,16 +92,15 @@ Works the same as multiply, except the operation is division
 	    }
 	    return currentGCD;
 }
-<<<<<<< HEAD
 
-    public void reduce() {
+    public void reduce() { //finding the divisor and dividing it out
     	double divisor = gcd(num,den);
     	num = num / divisor;
     	
     	den = den / divisor;
 }
 
-    public static double gcd2(double num, double denom) {
+    public static double gcd2(double num, double denom) { //legit same thing but static
         double currentGCD = 1.0;
 	    double remainder;
 	    if (num % denom  == 0.0) { //base case
@@ -116,7 +115,7 @@ Works the same as multiply, except the operation is division
 	    return currentGCD;
 }
 
-    public int compareTo(Rational r){
+    public int compareTo(Rational r){ //checks the difference
         double diff = this.floatValue() - r.floatValue();
         if (diff > 0.0){
             return 1;
@@ -125,12 +124,6 @@ Works the same as multiply, except the operation is division
             return 0;
         }
         else return -1;
-=======
-    public void reduce(){
-    	double divisor = gcd(num,den);
-    	num = num / divisor;
-   	den = den / divisor;
->>>>>>> 2ac7826f09db058ba1449b8534e83f707a4ed54d
 }
 
     public static void main(String[] args) {
