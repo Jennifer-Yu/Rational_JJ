@@ -95,7 +95,6 @@ Works the same as multiply, except the operation is division
     	double divisor = gcd(num,den);
     	num = num / divisor;
    	den = den / divisor;
-    	}
 }
 
     public static void main(String[] args) {
