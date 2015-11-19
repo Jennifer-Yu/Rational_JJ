@@ -92,6 +92,7 @@ Works the same as multiply, except the operation is division
 	    }
 	    return currentGCD;
 }
+<<<<<<< HEAD
 
     public void reduce() {
     	double divisor = gcd(num,den);
@@ -124,6 +125,12 @@ Works the same as multiply, except the operation is division
             return 0;
         }
         else return -1;
+=======
+    public void reduce(){
+    	double divisor = gcd(num,den);
+    	num = num / divisor;
+   	den = den / divisor;
+>>>>>>> 2ac7826f09db058ba1449b8534e83f707a4ed54d
 }
 
     public static void main(String[] args) {
