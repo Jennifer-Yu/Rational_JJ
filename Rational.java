@@ -93,10 +93,8 @@ Works the same as multiply, except the operation is division
 }
     public void reduce(){
     	double divisor = gcd(num,den);
-    	while (divisor != 1.0){
-    		divisor = gcd(num,den);
-    		num = num / divisor;
-    		den = den / divisor;
+    	num = num / divisor;
+   	den = den / divisor;
     	}
 }
 
