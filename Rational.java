@@ -70,27 +70,62 @@ Works the same as multiply, except the operation is division
     	r.den = den;
 }	
 
-    public void subtract(Rational r){
+    public Rational subtract(Rational r){
     	num *= r.den;
     	r.num *= den;
     	num -= r.num;
     	den *= r.den;
+    	return r;
 }
 
     public double gcd(double a, double b) { //while loop
-	double currentGCD = 1.0;
-	double remainder;
-	if (a % b == 0.0) { //base case
-		currentGCD = b;
-	}
-	while ((a % b) != 0.0) {
-		remainder = a % b; 
-		a = b; 
-		b = remainder; 
-		currentGCD = b;
-	}
-	return currentGCD;
+	    double currentGCD = 1.0;
+	    double remainder;
+	    if (a % b == 0.0) { //base case
+		    currentGCD = b;
+	    }
+	    while ((a % b) != 0.0) {
+		    remainder = a % b; 
+		    a = b; 
+	    	b = remainder; 
+	    	currentGCD = b;
+	    }
+	    return currentGCD;
 }
+
+    public void reduce() {
+    	double divisor = gcd(num,den);
+    	num = num / divisor;
+    	
+    	den = den / divisor;
+}
+
+    public static double gcd2(double num, double denom) {
+        double currentGCD = 1.0;
+	    double remainder;
+	    if (num % denom  == 0.0) { //base case
+		    currentGCD = denom;
+	    }
+	    while ((num % denom) != 0.0) {
+		    remainder = num % denom; 
+		    num = denom; 
+	    	denom = remainder; 
+	    	currentGCD = denom;
+	    }
+	    return currentGCD;
+}
+
+    public int compareTo(Rational r){
+        double diff = this.floatValue() - r.floatValue();
+        if (diff > 0.0){
+            return 1;
+        }
+        if (diff == 0.0){
+            return 0;
+        }
+        else return -1;
+}
+
     public static void main(String[] args) {
         Rational a = new Rational();
         a.rational();
@@ -108,6 +143,11 @@ Works the same as multiply, except the operation is division
 	    System.out.println(a);	
 	    a.divide(b);
 	    System.out.println(a);
+	    a.reduce();
+	    System.out.println(a);
+	    System.out.println(a.compareTo(b));
+	    System.out.println(a);
+	    System.out.println(b);
 	    //System.out.println("hi");	 
     }
 }
