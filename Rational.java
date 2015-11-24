@@ -1,4 +1,4 @@
-// TEAM Yu(r) W(r)ong - Jennifer Yu, Conan Wong
+// TEAM Yu(r) W(r)ong - Jennifer Yu, James Cao
 // APCS1 pd9
 // HW33 -- Do You Even Add, Bro?
 // 2015-11-17
@@ -125,12 +125,26 @@ Works the same as multiply, except the operation is division
         }
         else return -1;
 }
+    public boolean equals(Rational that) {
+        boolean retVal = this == that;
+        if (!retVal){
+            retVal = that instanceof Rational 
+                            && (this.num == that.num) 
+                            && (this.den == that.den);
+          
+        }
+          return retVal;
+          
+        }
+      
+    
+    
 
     public static void main(String[] args) {
         Rational a = new Rational();
         a.rational();
         System.out.println(a);	 
-        a.rational(3,7);
+        a.rational(4,8);
         System.out.println(a);
 	    //System.out.println(rational());
 	    //System.out.println(rational(6,0));
@@ -138,7 +152,7 @@ Works the same as multiply, except the operation is division
 	    System.out.println(a.toString());
 	    System.out.println(a.floatValue());	
 	    Rational b = new Rational();
-	    b.rational(2,3);
+	    b.rational(1,2);
 	    a.multiply(b);
 	    System.out.println(a);	
 	    a.divide(b);
@@ -148,9 +162,17 @@ Works the same as multiply, except the operation is division
 	    System.out.println(a.compareTo(b));
 	    System.out.println(a);
 	    System.out.println(b);
-	    //System.out.println("hi");	 
+	    System.out.println (a.equals(b));
+	    Rational c = new Rational ();
+	    c.rational (1,3);
+	    System.out.println (a.equals (c));
+	    System.out.println (a.equals (a));
+	    System.out.println (a.equals (518114));
     }
 }
+
+
+
 
 
 
