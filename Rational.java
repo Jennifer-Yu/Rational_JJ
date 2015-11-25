@@ -125,6 +125,8 @@ Works the same as multiply, except the operation is division
         }
         else return -1;
 }
+
+//LOOKED AT TILE'S EQUALS
     public boolean equals(Rational that) {
         boolean retVal = this == that;
         if (!retVal){
