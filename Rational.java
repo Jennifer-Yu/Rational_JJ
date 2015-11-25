@@ -1,7 +1,7 @@
 // TEAM Yu(r) W(r)ong - Jennifer Yu, James Cao
 // APCS1 pd9
-// HW33 -- Do You Even Add, Bro?
-// 2015-11-17
+// HW37 -- Rational Equality
+// 2015-11-24
 
 public class Rational {
     
